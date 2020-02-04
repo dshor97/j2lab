@@ -2,10 +2,9 @@ import os
 from matminer.data_retrieval.retrieve_MP import MPDataRetrieval
 import pandas as pd
 
-print(0)
 if not os.path.exists('data'):
 	os.makedirs('data')
-print(1)	
+
 cursor = MPDataRetrieval(api_key='ywhDLoCAd3HWqfVs')
 df_mp = cursor.get_dataframe(criteria='NaCl', properties=['pretty_formula',
 'unit_cell_formula',
